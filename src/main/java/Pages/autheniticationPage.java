@@ -15,7 +15,9 @@ public class autheniticationPage extends pageBase {
     private final By loginBtn =By.id("login-button");
     private final By assertTitle =By.className("app_logo");
     private final By assertErrorUser = By.cssSelector("h3[data-test=\"error\"]");
-
+    private final By toggleBtn =By.id("react-burger-menu-btn");
+    //logout_sidebar_link
+    private final By logBtn =By.id("logout_sidebar_link");
     public void  loginFunc(String  Uname , String Upass)
     {
         enterTxt(driver.findElement(userInp),Uname );
@@ -32,9 +34,15 @@ public class autheniticationPage extends pageBase {
         return driver.findElement(assertErrorUser);
     }
 
+  public void clickToggleBtn()
+  {
+      clickEle(driver.findElement(toggleBtn));
+  }
 
-
-
+    public void logOutBtn()
+    {
+        clickEle(driver.findElement(logBtn));
+    }
 
 
 }

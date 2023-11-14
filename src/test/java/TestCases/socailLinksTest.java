@@ -18,7 +18,7 @@ public class socailLinksTest extends testBase{
     SoftAssert softAssert = new SoftAssert();
 
     @Test(priority = 1)
-    public void validLogin() throws InterruptedException {
+    public void checkSocailIcons() throws InterruptedException {
         softAssert.assertTrue(driver.getCurrentUrl().contains("https://www.saucedemo.com/"));
 
         autheniticationPage = new autheniticationPage(driver);

@@ -1,0 +1,9 @@
+{
+  "UserLogin":[
+    {"userName":"standard_user", "userPass":"secret_sauce"},
+    {"userName":"problem_user", "userPass":"secret_sauce"},
+    {"userName":"visual_user", "userPass":"secret_sauce"}
+
+  ]
+
+}
