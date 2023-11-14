@@ -3,7 +3,9 @@ package TestCases;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.annotations.AfterClass;
+import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeClass;
+import org.testng.annotations.BeforeMethod;
 
 import java.util.concurrent.TimeUnit;
 
@@ -11,7 +13,7 @@ public class testBase {
 
 
     public WebDriver driver ;
-    @BeforeClass
+    @BeforeMethod
     public void setUP()
     {
 
@@ -25,7 +27,7 @@ public class testBase {
     }
 
 
-    @AfterClass
+    @AfterMethod
     public void cleanUp() throws InterruptedException {
         Thread.sleep(3000);
         driver.quit();

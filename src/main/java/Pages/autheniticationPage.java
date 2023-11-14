@@ -1,6 +1,8 @@
 package Pages;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 
 public class autheniticationPage extends pageBase {
     public autheniticationPage(WebDriver driver) {
@@ -8,8 +10,29 @@ public class autheniticationPage extends pageBase {
     }
 
 
+    private final By userInp = By.id("user-name");
+    private final By passInp = By.id("password");
+    private final By loginBtn =By.id("login-button");
+    private final By assertTitle =By.className("app_logo");
+    private final By assertErrorUser = By.cssSelector("h3[data-test=\"error\"]");
 
-    
+    public void  loginFunc(String  Uname , String Upass)
+    {
+        enterTxt(driver.findElement(userInp),Uname );
+        enterTxt(driver.findElement(passInp),Upass );
+        clickEle(driver.findElement(loginBtn));
+    }
+
+    public WebElement assertTit()
+    {
+        return driver.findElement(assertTitle);
+    }
+    public WebElement assertErrorUser()
+    {
+        return driver.findElement(assertErrorUser);
+    }
+
+
 
 
 
